@@ -1,0 +1,604 @@
+*{
+    box-sizing: border-box;
+    font-family: calibri;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    width:100%;
+    box-shadow:0 0 30px rgba(1, 1, 1, 0);
+    position: fixed;
+    z-index: 9999;
+}
+.row{
+    width:100%;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(66, 60, 60, 0.227);
+}
+body{
+    margin:0;
+}
+.email{width:45%;}
+.social{
+    width:55%;
+}
+
+.pd{
+    padding:10px 5%;
+}
+
+.bg-dark{
+    background:rgba(23, 22, 22, 0.647);
+}
+.text-pink{
+    color: rgb(255, 2, 70);
+}
+.text-white{
+    color:white;
+}
+
+.text-end{
+    text-align: right;
+}
+
+.social ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: end;
+}
+
+.social ul li a{
+    padding:0 20px;
+    color:white;
+}
+
+.social ul li a:hover{
+    color:orange;
+}
+
+header .row .webname{
+    width:30%;
+    font-size:2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#14A44D;
+}
+
+header .row nav{
+    width:70%;
+}
+
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+nav ul li{
+    width:120px;
+    height:40px;
+    text-align: center;
+    line-height:40px;
+    position: relative;  
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:rgb(245, 242, 242);
+    font-weight: bold;
+    display: block;
+    
+}
+
+nav ul li a.active, nav ul li a:hover{
+    background:rgb(199, 17, 62);
+    color:rgb(239, 202, 13)
+}
+
+/*Dropdown*/
+.drop::after{content:" +"}
+
+.dropdown{
+    width:180px;
+    visibility: hidden;
+    opacity:0;
+    transition:.5s all ease;  
+}
+
+.dropdown ul li{
+    width:100%;
+    background:rgb(169, 73, 4);
+    border-bottom:1px solid #ccc;
+}
+
+.dropdown ul li a{
+    color:white;
+}
+
+.dropdown ul li a:hover{
+    background:orange;
+}
+
+nav ul li:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+}
+
+/*subDropdown*/
+.subdrop{
+    width:100%;
+    
+    background:red;
+   left:110%;
+    position: absolute;
+    top:0;
+    border-left:5px solid white;
+    visibility: hidden;
+    opacity:0;
+    transition:.2s;
+}
+
+.dropdown ul li:hover .subdrop{
+    visibility: visible;
+    left:100%;
+    opacity:1;
+}
+.herosection{
+    width: 100%;
+    height: 100vh;
+}
+.maincontent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    top: 0px;
+    z-index: -1;
+}
+.content{
+    margin-left: 30%;
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    top: 20%;
+}
+.content h1{
+    font-size: 70px;   
+}
+.content h4{
+    font-size: 20px;
+}
+.content h5{
+    font-size: 15px;  
+}
+button{
+    width: 180px;
+    height: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: rgb(255, 2, 70);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.part2{
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+.categories{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subcat{
+    height: 10%;
+    margin-top: 40px;
+}
+.subcat h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(67, 63, 63);
+    margin-bottom: 40px;
+}
+.subcat2{
+    height: 90%;
+    width: 94%;
+}
+.row-6{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col-md-4{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info{
+    width: 100%;
+    height: 220px;
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 35px;
+    padding: 10px;
+    z-index: -1;
+}
+.info h3{
+    font-size: 23px;
+}
+.info h5{
+    font-size: 15px;
+    font-weight: lighter;
+}
+.business{
+    width: 100%;
+    position: relative;
+    top: 60px;
+}
+.subicon{
+    font-size: 40px;
+    background-color: white;
+    border: 5px solid #f1f1f1;
+    border-radius: 50%;
+    padding: 15px;
+}
+.part3{
+    height: 50vh;
+    width: 100%;
+    background-image: url(https://media.istockphoto.com/id/1390242644/photo/smiling-people-in-the-meeting-room-using-a-laptop-searching-s.jpg?s=2048x2048&w=is&k=20&c=CYIJefwuOEvYo2auShUBaUHL1yURgmvWxd2aTg47_P8=);
+    background-size: cover;
+    background-attachment:fixed;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.pinkicons{
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    font-weight: lighter;
+    background-color: white;
+    border: solid 5px#F10C62;
+    border-radius: 50%;
+    color: #F10C62;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1{
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+}
+.container h5{
+    color: white;
+}
+.part4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.col-md-2{
+    height: 20vh;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: #F10C62;
+    font-size: 20px;
+}
+.col-md-10{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.box{
+    width: 23%;
+    background-color: rgb(226, 226, 235);
+}
+.boxsub1{
+    height: 40vh;
+    background-size: cover;
+}
+.boxsub2{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.boxsub2 h1{
+    font-weight: 600;
+    font-size: 25px;
+}
+.boxsub2 h5{
+    color: rgb(44, 41, 41);
+    font-weight: lighter;
+    font-size: 17px;
+}
+.boxsub2 h6{
+    color: rgb(141, 131, 131);
+    font-size: 14px;
+}
+.bottom h6{
+    color: black;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer{
+    height: 480px;
+    width: 100%;
+}
+.col-md-11{
+    background-color:rgba(9,26,46,.8);
+    height: 87%;
+    width: 100%;
+}
+.col-md-1{
+    background-color: rgb(7, 23, 43);
+    height: 13%;
+}
+.about{
+    width: 80%;
+    height: 100%;
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.col-4{
+    width: 31%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.empty{
+    height: 20%;
+}
+.col-4 h4{
+    font-weight: lighter;
+    font-size: 17px;
+}
+.col-4 span{
+    font-size: 40px;
+    font-weight: 100;
+}
+tech{
+    position: relative;
+    bottom: 5px;
+}
+.col-4 hr{
+    height: 4px;
+    background-color: white;
+    width: 18%;
+    margin-top: 8px;
+}
+.links{
+    display: flex;
+    flex-wrap: wrap;
+}
+.link{
+    width: 50%;
+}
+.link ul{
+    list-style: none;
+}
+.link ul li{
+    margin-bottom: 20px;
+}
+.foot-icons{
+    display: flex;
+    flex-wrap: wrap;
+}
+.foot-icons i{
+    height: 38px;
+    width: 38px;
+    padding: 12px;
+    margin: 4px 4px;
+    background-color: rgb(7,23,43);
+}
+.copyright{
+    width: 70%;
+    height: 100%;
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.FAQ{
+    width:20%;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-between;
+}
+.copyright h4{
+    font-size: 15px;
+    font-weight: lighter;
+}
+@media screen and (max-width:1160px){
+    header .row .webname{
+        width:10%;
+        font-size:1rem;
+    }
+    header .row nav{
+        width:80%;
+    }
+    
+    nav ul{
+        list-style:none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    nav ul li{
+        width:48px;
+        height:16px;
+        text-align: center;
+        line-height:16px;
+        position: relative;
+        text-align: center; 
+    }
+    
+    nav ul li a{
+        font-size: 0.7rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color:rgb(245, 242, 242);
+        font-weight: bold;
+        display: block;
+    }
+    .dropdown{
+        width: 130px;
+        visibility: hidden;
+        opacity:0;
+        transition:.5s all ease;  
+    }
+    .dropdown ul li{
+        width:100%;
+        height: 40px;
+        background:rgb(169, 73, 4);
+        border-bottom:1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dropdown ul li:hover{
+        background-color: orange;
+    }
+    
+}
+@media screen and (max-width:767px){
+    .email{
+        width: 50%;
+        font-size: 11px;
+    }
+    .social{
+        width: 50%;
+        font-size: 12px;
+    }
+    .herosection{
+        width: 100%;
+        height: 90vh;
+    }
+    .maincontent{
+        height: 90%;
+        background-image: url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-position: center;
+    }
+    .categories{
+        height: 100%;
+    }
+    .col-md-4{
+        width: 100%;
+        height: 100%;
+    }
+    .info{
+        width: 100%;
+        height: 200px;
+    }
+    .row-6{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .content h4{
+        font-size: 18px;
+    }
+    .content h1{
+        font-size: 40px;
+    }
+    .part3{
+        height: 100%;
+        width: 100%;
+        background-image: url(https://media.istockphoto.com/id/1390242644/photo/smiling-people-in-the-meeting-room-using-a-laptop-searching-s.jpg?s=2048x2048&w=is&k=20&c=CYIJefwuOEvYo2auShUBaUHL1yURgmvWxd2aTg47_P8=);
+        background-position:center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .container{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .box{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .col-md-11{
+        height: 110vh;
+    }
+    .about{
+        height: 99%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .col-4{
+        width: 100%;
+        height: 30%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .empty{
+        height: 0px;
+    }
+}
+@media screen and (max-width:1000px){
+    .copyright{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .FAQ{
+        width:50%;
+    }
+}
+
+
+
